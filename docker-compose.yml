@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  parking:
+    build: .
+    container_name: parking_app
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Переадресація на LiqPay...</title>
+</head>
+<body>
+    <p>Зачекайте, відбувається переадресація на платіжну сторінку...</p>
+    {{ form|safe }}
+
+    <script>
+        document.forms[0].submit();
+    </script>
+</body>
+</html>

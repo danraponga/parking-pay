@@ -1,0 +1,6 @@
+Flask
+liqpay-python
+paho-mqtt
+python-dotenv
+git+https://github.com/liqpay/sdk-python#egg=liqpay-python
+gunicorn
