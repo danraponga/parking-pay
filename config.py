@@ -10,7 +10,7 @@ class Config:
     mqtt_username: str
     mqtt_password: str
     base_url: str
-    liqpay_sandbox: int = 0
+    liqpay_sandbox: int
     
     @staticmethod
     def from_env() -> "Config":
@@ -20,6 +20,7 @@ class Config:
         return Config(
             liqpay_pub_key=os.getenv("LIQPAY_PUBLIC_KEY"), # type: ignore
             liqpay_private_key=os.getenv("LIQPAY_PRIVATE_KEY"), # type: ignore
+            liqpay_sandbox=os.getenv("LIQPAY_SANDBOX"), # type: ignore
             mqtt_host=os.getenv("MQTT_HOST"), # type: ignore
             mqtt_port=int(os.getenv("MQTT_PORT")), # type: ignore
             mqtt_username=os.getenv("MQTT_USERNAME"), # type: ignore
